@@ -1,0 +1,132 @@
+#input parameters
+
+##### Mesh Type ####
+
+# rectangular_plate
+# I_bar
+# asymetrical_notch
+# symmetrical_notch_large
+# symmetrical_notch_small
+# single_notch
+# double_diagonal_notch
+# L_bar  # not done
+# CT
+# custom_mesh
+
+mesh_type=asymetrical_notch
+
+# mesh filename, do attach correct boundary ID of 11 & 13 otherwise BC will not work
+mesh_filename=inputFiles/CrPaper.msh
+
+##### Displacement and BC #####
+
+# Loading condition: 0 Monotonic, 1 Fatigue
+load_type = 0;
+
+# Starting strain
+present_strain=0.0
+
+# Strain rate (s^-1) or strain step
+strain_rate=0.001
+
+# for Fatigue type case
+strain_min=0.001
+
+strain_max=0.025
+
+# End time
+end_time=600.
+
+# Default timestep (s)
+default_dt=0.25
+##### Material properties #####
+
+# Shear modulus (GPa)
+MU=80.0
+
+# Bulk Modulus (GPa)
+Kn=278.1
+
+# Yield stress (GPa)
+Ystrss=0.219
+
+# Hardening modulus (GPa)
+H_pl=0.721
+
+# Material Fracture Toughness (GPa mm)
+Gc=0.25
+
+##### Changing properties #####
+
+# Artificial residual stiffness
+Eta=0.005
+
+# von Mises equivalent threshold plastic strain (%)
+Ep_crit=0.100
+
+# Transition zone parameter (mm)
+L_dam=0.1
+
+##### Mesh parameters #####
+
+# Refinement level for given mesh
+refinement_level=6
+
+# Output Frequency
+outputFrequency=1
+
+##### Control parameters #####
+
+# Max. Staggered steps
+N_stagger=20
+
+# Max. NR steps for u
+N_NR_disp=10
+
+# Max. NR steps for s
+N_NR_dam=10
+
+# Energy error tolerance
+Energy_tol=1e-5
+
+# RHS displacement eq. tolerance
+rhs_disp_tol=1e-4
+
+# RHS damage eq. tolerance
+rhs_dam_tol=1e-4
+
+# Tolerance for linear solve of displacment
+lin_solve_disp_tol=1e-10
+
+# Tolerance for linear solve of damage
+lin_solve_dam_tol=1e-7
+
+# Timestep control for max plastic strain allowed
+d_eps_p_limit=0.002
+
+# Timestep control for max damage allowed
+d_dam_max_limit=0.1
+
+# Parameters for input stress strain calculation
+#   Can also be used for mesh generation
+
+# Enable bounding box (0 or 1) for size_x, size_y, size_z calculation, useful when oriented in xyz
+enable_bounding_box=1
+
+size_x=6.70871
+
+size_y=10.
+
+size_z=1.
+
+n_subdivisions_x=2
+
+n_subdivisions_y=7
+
+n_subdivisions_z=7
+
+# Enable brittle LEFM
+enable_brittle_LEFM=0
+
+# Enable elastoplastic brittle fracture (overwrites brittle LEFM option)
+enable_elastoplastic_brittle_fracture=1
