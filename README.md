@@ -4,7 +4,7 @@
 # About
 
 
-This is the source code of phase field fracture (or crack) simulation program written in C++ with the help of [deal.II](https://dealii.org/) library.
+This is the source code of phase field fracture (or crack) simulation program written in C++ and makes use of [deal.II](https://dealii.org/) finite element library.
 
 ## Acknowledgement
 
