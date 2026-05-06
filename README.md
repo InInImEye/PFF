@@ -1,14 +1,10 @@
 # Phase field fracture (PFF) 
 
 
-# About
+## About
 
 
 This is the source code of phase field fracture (or crack) simulation program written in C++ and makes use of [deal.II](https://dealii.org/) finite element library.
-
-## Acknowledgement
-
-
 
 ## Program usage
 
@@ -33,5 +29,7 @@ This is the source code of phase field fracture (or crack) simulation program wr
 4. `mpirun -np N ./pfc`
 
 ## References
+
+## Acknowledgement
 
 
