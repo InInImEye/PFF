@@ -1,10 +1,17 @@
-# PFF 
+# Phase field fracture (PFF) 
+
+
+# About
+
+
+This is the source code of phase field fracture program written in C++ with the help of Dealii library.
 
 ## Acknowledgement
 
-## References
+
 
 ## Program usage
+
 
 ##### Running the program
 
@@ -24,4 +31,7 @@
 2. `make release`
 3. `make`
 4. `mpirun -np N ./pfc`
+
+## References
+
 
