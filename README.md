@@ -10,7 +10,7 @@ This program is written based on the phase field crack models presented in the f
 - [A review on phase-field models of brittle fracture and a new fast hybrid formulation](https://doi.org/10.1007/s00466-014-1109-y)
 - [Phase-Field Modeling of Ductile Fracture](https://doi.org/10.1007/s00466-015-1151-4)
 
-Dealii 9.5.1 [ref](https://doi.org/10.1515/jnma-2023-0089)
+Dealii 9.5.1 [ref](https://doi.org/10.1515/jnma-2023-0089) [ref2](https://github.com/dealii/dealii/tree/dealii-9.5)
 
 ## Program usage
 
