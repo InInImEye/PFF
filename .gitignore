@@ -1,0 +1,18 @@
+# ignore all temporary files
+*.swp
+
+# ignore CMakeCache and CMakeFiles
+CMakeCache.txt
+CMakeFiles/
+
+# ignore debug/
+#!debug
+debug/*
+#!debug/.gitkeep
+
+# ignore results/
+results/*
+#!results/.gitkeep
+
+# ignore HPCresults
+HPCresults/*
