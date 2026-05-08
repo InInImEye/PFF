@@ -8,6 +8,10 @@ This is the source code of phase field fracture (or crack) simulation program wr
 
 ## Program usage
 
+## File structure
+
+## Installing Dealii
+
 
 ##### Running the program
 
