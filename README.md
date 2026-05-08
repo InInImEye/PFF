@@ -15,7 +15,7 @@ This is the source code of phase field fracture (or crack) simulation program wr
 
 ##### Running the program
 
-```
+```bash
 mkdir debug
 mkdir results
 rm -rf CMakeCache.txt CMakeFiles
@@ -27,7 +27,7 @@ mpirun -np N ./pfc
 
 ##### Rerunning program with only parameter changes
 
-```
+```bash
 make runclean
 make release
 make
