@@ -1,4 +1,4 @@
-# Phase field fracture (PFF) 
+# Phase field fracture/ crack program (PFF) 
 
 
 ## About
@@ -9,6 +9,7 @@ This is the source code of phase field fracture (or crack) simulation program wr
 This program is written based on the phase field crack models presented in the following papers:
 - [A review on phase-field models of brittle fracture and a new fast hybrid formulation](https://doi.org/10.1007/s00466-014-1109-y)
 - [Phase-Field Modeling of Ductile Fracture](https://doi.org/10.1007/s00466-015-1151-4)
+
 ## Program usage
 
 ## File structure
@@ -37,8 +38,7 @@ make
 mpirun -np N ./pfc
 ```
 
-## References
-
 ## Acknowledgement
 
-
+Dr. Sabyasachi Chatterjee [SC_W | Webpage](https://web.iitd.ac.in/~sabyasachi/) [SC_PW | Personal Webpage](https://sites.google.com/view/sabyasachichatterjee/home) [SC_RG | Researchgate](https://www.researchgate.net/profile/Sabyasachi-Chatterjee-2) 
+Dr. Anup Basak [AB_PW | Webpage](https://old.iittp.ac.in/dr-anup-basak) [AB_GS | Google scholar](https://scholar.google.com/citations?user=m_TDGD8AAAAJ&hl=en)
