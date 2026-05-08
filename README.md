@@ -40,5 +40,6 @@ mpirun -np N ./pfc
 
 ## Acknowledgement
 
-Dr. Sabyasachi Chatterjee [SC_W | Webpage](https://web.iitd.ac.in/~sabyasachi/) [SC_PW | Personal Webpage](https://sites.google.com/view/sabyasachichatterjee/home) [SC_RG | Researchgate](https://www.researchgate.net/profile/Sabyasachi-Chatterjee-2) 
-Dr. Anup Basak [AB_PW | Webpage](https://old.iittp.ac.in/dr-anup-basak) [AB_GS | Google scholar](https://scholar.google.com/citations?user=m_TDGD8AAAAJ&hl=en)
+Dr. Sabyasachi Chatterjee [Webpage](https://web.iitd.ac.in/~sabyasachi/) [Personal Webpage](https://sites.google.com/view/sabyasachichatterjee/home) [Researchgate](https://www.researchgate.net/profile/Sabyasachi-Chatterjee-2) 
+
+Dr. Anup Basak [Webpage](https://old.iittp.ac.in/dr-anup-basak) [Google scholar](https://scholar.google.com/citations?user=m_TDGD8AAAAJ&hl=en)
