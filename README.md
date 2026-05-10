@@ -10,7 +10,7 @@ This program is written based on the phase field crack models presented in the f
 - [A review on phase-field models of brittle fracture and a new fast hybrid formulation](https://doi.org/10.1007/s00466-014-1109-y)
 - [Phase-Field Modeling of Ductile Fracture](https://doi.org/10.1007/s00466-015-1151-4)
 
-Dealii 9.5.1 [ref](https://doi.org/10.1515/jnma-2023-0089) [ref2](https://github.com/dealii/dealii/tree/dealii-9.5)
+deal.II 9.5.1 [ref](https://doi.org/10.1515/jnma-2023-0089) [ref2](https://github.com/dealii/dealii/tree/dealii-9.5)
 
 ## Program usage
 
@@ -18,7 +18,7 @@ Dealii 9.5.1 [ref](https://doi.org/10.1515/jnma-2023-0089) [ref2](https://github
 
 ## Installation of Libraries
 
-Several libraries are required to run this code. These include P4est, PetSc, Parmetis, and Deal.ii. Deal.ii makes it possible to install all these with the already made available [Candi](https://github.com/dealii/candi) script, which we can use to install the libraries and automatically link to each other. As of February 2025, this code is compatible with deal.ii version 9.5.1 **(Compatibility with the latest version has not been checked, the code might require forward porting with minor changes or possibly no changes at all.)**. All other libraries versions are automatically selected by candi during installation. We here describe the installation procedure with the Ubuntu OS.
+Several libraries are required to run this code. These include P4est, PetSc, Parmetis, and Deal.ii. Deal.ii makes it possible to install all these with the already made available [candi](https://github.com/dealii/candi) script, which we can use to install the libraries and automatically link to each other. As of February 2025, this code is compatible with deal.II version 9.5.1 **(Compatibility with the latest version has not been checked, the code might require forward porting with minor changes or possibly no changes at all.)**. All other libraries versions are automatically selected by candi during installation. We here describe the installation procedure with the Ubuntu OS.
 
 First check the repositories are accessible with the `apt` and they are not giving any error. Try:
 ```
@@ -73,14 +73,14 @@ If no error shows up then you are good to proceed. Next make sure the requiremen
     mpirun --version
     ```
 
-### Install Deal.II and other libraries
+### Install deal.II and other libraries
 
 Now, these pre-requisites are fulfilled according to the previous sections:
 
 1. Installation of the dependencies, according to your supported OS as mentioned in: `candi/deal.II-toolchain/platforms/supported/`
-2. Installation of mpich using the instructions.
+2. Installation of MPICH using the instructions.
 
-Next, we install the rest of the libraries using Candi.
+Next, we install the rest of the libraries using candi.
 
 1. Enter the commands for creating a download and installation directory and download the source code as given below. Do this in the directory `your_location` where you want your deal.II and related libraries to be installed.
     ```
@@ -105,14 +105,22 @@ Next, we install the rest of the libraries using Candi.
     PACKAGES="${PACKAGES} once:petsc
     PACKAGES="${PACKAGES} dealii
     ```
+4. In the same file modify the version to install the correct deal.II version.
+    ```
+    DEAL_II_VERSION=v9.5.1
+    ```
 
-4. Install:
+5. Install:
     
     ```
-    ./candi.sh --prefix=your_location/CL/FEM --platform=./deal.II-toolchain/platforms/supported/YOUR_OS.platform
+    ./candi.sh --prefix=/your_location/CL/FEM --platform=./deal.II-toolchain/platforms/supported/YOUR_OS.platform
     ```
+    **Make sure `YOUR_OS` is in the supported platforms list.** For our system we used `ubuntu.platform`
 
-5. Make sure `YOUR_OS` is in the supported platforms list.
+6.  Once the setup is complete you can proceed to run simulations in the `your_location/CL/FEM/deal.II-v9.5.1` directory. If you want to use it outside the installation directory you need to add a `PATH` to it, similar to the MPICH installation step.
+    ```
+    export DEAL_II_DIR=/your_location/CL/FEM/deal.II-v9.5.1/
+    ```
 
 ## Run
 
