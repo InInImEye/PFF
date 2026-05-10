@@ -26,45 +26,46 @@ sudo apt update
 ```
 If no error shows up then you are good to proceed. Next make sure the requirements following are met:
 1. Use gcc version > 5. Check the version using
-```
-gcc -v
-```
+    ```
+    gcc -v
+    ```
 2. Have MPICH installed with the gcc > 5. Check using
-```
-which mpicc
-```
-or
-```
-mpirun --version
-```
+    ```
+    which mpicc
+    ```
+    or
+    ```
+    mpirun --version
+    ```
 ### Install MPICH
 1. Download the latest version of MPICH from its [website](https://www.mpich.org/downloads/).
 2. Install by following the [Guide](https://www.mpich.org/documentation/guides/). At the time of this code development Version [4.1.2](https://www.mpich.org/static/downloads/4.1.2/mpich-4.1.2-installguide.pdf) was available. Installation commands for `bash` terminal are summarized below:
 
-```
+    ```
+    mkdir ~/myloc                         # Make a directory where you want to extract files
+    
+    tar xfz mpich-4.1.2.tar.gz -C ~/myloc # Unpack the tar file to the location.
 
-tar xfz mpich-4.1.2.tar.gz            # Unpack the tar file.
+    mkdir ~/mpich-install                 # Choose an installation directory 
 
-mkdir /home/you/mpich-install         # Choose an installation directory 
+    mkdir /tmp/you/mpich-4.1.2            # Choose a build directory
 
-mkdir /tmp/you/mpich-4.1.2            # Choose a build directory
+    # Configure MPICH, specifying the installation directory, and running
+    the configure script in the source directory
 
-# Configure MPICH, specifying the installation directory, and running
-the configure script in the source directory
-cd /tmp/you/mpich-4.1.2
+    cd /tmp/you/mpich-4.1.2
+    ~/myloc/mpich-4.1.2/configure -prefix=~/mpich-install 2>&1 | tee c.txt
 
-/home/you/libraries/mpich-4.1.2/configure -prefix=/home/you/mpich-install 2>&1 | tee c.txt
+    make 2>&1 | tee m.txt                 # Build MPICH
 
-make 2>&1 | tee m.txt                 # Build MPICH
+    make install 2>&1 | tee mi.txt        # Install the MPICH 
 
-make install 2>&1 | tee mi.txt        # Install the MPICH 
+    export PATH="$HOME/myloc/mpich-4.1.2/bin:$PATH"  # Set PATH by adding this to end of ~/.bashrc file
 
-export PATH="$HOME/mpich-4.1.2/bin:$PATH"  # Set PATH by adding this to end of ~/.bashrc file
-
-# Restart terminal and check that the MPICH is accessible by running:
-which mpicc
-which mpiexec
-```
+    # Restart the terminal and check that the MPICH is accessible by running:
+    which mpicc
+    which mpiexec
+    ```
 
 ##### Running the program
 
