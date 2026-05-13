@@ -126,7 +126,7 @@ Next, we install the rest of the libraries using candi.
 
 We have mentioned the steps for compiling and running the program under same section, since it is pretty straightforward.
 
-##### First run of the program
+#### First run of the program
 
 Some directories need to be made before running the program since program looks for it, to output various information.
 
@@ -140,20 +140,23 @@ make
 mpirun -np N ./pfc
 ```
 
-##### Rerunning the program
+All the steps required to compile the program is also given in `update.sh` script which can executed every time you want to run the program. Do not forget to take a backup of the `results`, `debug` and necessary files in `inputFiles` folder, to retain previous simulation data.
 
-`./update.sh`
+#### Rerunning the program
 
-copy the results and debug and params files before rerunning
+Before each rerun it is good practice to take a backup of `results`, `debug`, `pfc.cc`, `inputFiles/params.in`, `inputFiles/options.in` and `inputFiles/YOUR_mesh` for the simulations whose data you want to preserve.
 
-if you make changes only to the the params.in then make not required
+To recompile, simply run:
+```
+./update.sh
+```
 
-if you make changes to the program then make 
+If you have only made changes to the files `inputFiles/params.in` or `inputFiles/YOUR_mesh` and made no changes to other files then no need to recompile.
 
+All commands put together for rerunning:
 
 ```
-make runclean
-make release
+./update.sh
 make
 mpirun -np N ./pfc
 ```
