@@ -82,7 +82,7 @@ Now, these pre-requisites are fulfilled according to the previous sections:
 
 Next, we install the rest of the libraries using candi.
 
-1. Enter the commands for creating a download and installation directory and download the source code as given below. Do this in the directory `your_location` where you want your deal.II and related libraries to be installed.
+1. Enter the commands for creating a download and installation directory, and download the source code as given below. Do this in the directory `your_location` where you want your deal.II and related libraries to be installed.
     ```
     mkdir CL
     cd CL
@@ -122,9 +122,13 @@ Next, we install the rest of the libraries using candi.
     export DEAL_II_DIR=/your_location/CL/FEM/deal.II-v9.5.1/
     ```
 
-## Run
+## Running the program
 
-##### Running the program
+We have mentioned the steps for compiling and running the program under same section, since it is pretty straightforward.
+
+##### First run of the program
+
+Some directories need to be made before running the program since program looks for it, to output various information.
 
 ```
 mkdir debug
@@ -136,7 +140,16 @@ make
 mpirun -np N ./pfc
 ```
 
-##### Rerunning program with only parameter changes
+##### Rerunning the program
+
+`./update.sh`
+
+copy the results and debug and params files before rerunning
+
+if you make changes only to the the params.in then make not required
+
+if you make changes to the program then make 
+
 
 ```
 make runclean
@@ -147,6 +160,4 @@ mpirun -np N ./pfc
 
 ## Acknowledgement
 
-Dr. Sabyasachi Chatterjee [1](https://web.iitd.ac.in/~sabyasachi/ "Webpage") [2](https://sites.google.com/view/sabyasachichatterjee/home "Personal Webpage") [3](https://www.researchgate.net/profile/Sabyasachi-Chatterjee-2 "Researchgate") 
-
-Dr. Anup Basak [1](https://old.iittp.ac.in/dr-anup-basak "Webpage") [2](https://scholar.google.com/citations?user=m_TDGD8AAAAJ&hl=en "Google scholar")
+This research was funded by [SERB](https://serb.gov.in/) (currently ANRF) via project No. RP04378G. Gratitude to [IRD](https://ird.iitd.ac.in/) [IITD](https://home.iitd.ac.in/) for the opportunity to work on the project. Dr. Sabyasachi Chatterjee ([1](https://web.iitd.ac.in/~sabyasachi/ "Webpage") [2](https://sites.google.com/view/sabyasachichatterjee/home "Personal Webpage") [3](https://www.researchgate.net/profile/Sabyasachi-Chatterjee-2 "Researchgate")) provided continuous guidance throughout the project through insightful discussions, relevant literature, and all necessary support. The discussions with Dr. Anup Basak ([1](https://old.iittp.ac.in/dr-anup-basak "Webpage") [2](https://scholar.google.com/citations?user=m_TDGD8AAAAJ&hl=en "Google scholar")), Mechanical Engineering, IIT Tirupati, on implementation of the model is greatly aknowledged.
