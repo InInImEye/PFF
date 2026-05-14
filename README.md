@@ -65,6 +65,16 @@ mesh_filename=inputFiles/Your_Mesh.msh
 
 Ofcourse while designing the mesh you need to keep in mind that the refinement in the expected crack region needs to be of the similar or lower than the size of the length scale. Also during mesh construction assign the fixed Dirichlet boundary a boundary ID of 11, and the loading boundary must be assigned a boundary ID of 13.
 
+<figure>
+<p align="center">
+<img src="./images/singlenotchGeoref.png" alt="Single edge notch refined mesh" height="200" style="float;">
+<img src="./images/DiaNotchmesh.png" alt="Diagonal notch refined mesh" height="200" style="float;">
+<img src="./images/SymmNotchR2geo.png" alt="Symmetrical notch refined mesh" height="200" style="float;">
+<br>
+Different meshes with refinement in the expected crack region
+</p>
+</figure>
+
 ### Input parameters
 
 Most of the input parameters in `params.in` are self explanatory, important ones highlighted below:
@@ -87,6 +97,9 @@ Simulation by default uses Dirichlet boundary which relies on the identification
 ### Visualizing the simulation results
 
 Simulation results can be viewed using [Paraview](https://www.paraview.org/) program.
+```
+paraview results/solution.pvd
+```
 
 To create a line plot of average stress vs strain you can use already available python script. In the root folder of PFF enter the command:
 ```
@@ -94,9 +107,9 @@ python3 PlotScripts/strss_strain_plot.py results/stress_strain.txt
 ```
 <figure>
 <p align="center">
-<img src="./images/HalfSlitRefine.gif" alt="Single edge notch damage simulation" height="200" style="float: left; margin-right: 20px;">
+<img src="./images/HalfSlitRefine.gif" alt="Single edge notch damage simulation" height="200" style="float;">
 <img src="./images/DiaNotchdamage.gif" alt="Diagonal notch damage simulation" height="200" style="float;">
-<img src="./images/AsymmNotchdamage.gif" alt="Asymmetrical notch damage simulation" height="200" style="float: right; margin-left: 20px;">
+<img src="./images/AsymmNotchdamage.gif" alt="Asymmetrical notch damage simulation" height="200" style="float;">
 <br>
 Crack propagation in various geometries under monotonic loading
 </p>
