@@ -94,9 +94,9 @@ python3 PlotScripts/strss_strain_plot.py results/stress_strain.txt
 ```
 <figure>
 <p align="center">
-<img src="./images/HalfSlitRefine.gif" alt="Single edge notch damage simulation" height="200" style="float">
+<img src="./images/HalfSlitRefine.gif" alt="Single edge notch damage simulation" height="200" style="float; margin-right: 20px">
 <img src="./images/DiaNotchdamage.gif" alt="Diagonal notch damage simulation" height="200" style="float">
-<img src="./images/AsymmNotchdamage.gif" alt="Asymmetrical notch damage simulation" height="200" style="float">
+<img src="./images/AsymmNotchdamage.gif" alt="Asymmetrical notch damage simulation" height="200" style="float; margin-left: 20px">
 <br>
 Crack propagation in various geometries under monotonic loading
 </p>
