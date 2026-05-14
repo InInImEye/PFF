@@ -4,7 +4,7 @@
 ## About
 
 <figure>
-<img src="./images/Ibardamage.gif" alt="I-Bar damage simulation" height="200" align="middle">
+<img src="./images/Ibardamage.gif" alt="I-Bar damage simulation" height="200" align="center">
 <figcaption>Crack propagation in I-Bar under monotonic loading</figcaption>
 </figure>
 
