@@ -2,6 +2,13 @@
 
 
 ## About
+
+This is the source code of phase field fracture (or crack) simulation program written in C++ and makes use of [deal.II](https://dealii.org/) finite element library version 9.5.1 ([1](https://doi.org/10.1515/jnma-2023-0089) [2](https://github.com/dealii/dealii/tree/dealii-9.5)). This program is written based on the phase field crack models presented in the following papers:
+- [A review on phase-field models of brittle fracture and a new fast hybrid formulation](https://doi.org/10.1007/s00466-014-1109-y)
+- [Phase-Field Modeling of Ductile Fracture](https://doi.org/10.1007/s00466-015-1151-4)
+
+It allows parallel and serial simulation options between linear elastic fracture model, elastoplastic brittle fracture model and elastoplastic ductile fracture model with custom material parameters. The plasticty model used is linear isotropic hardening model. This program was part of the project "Coupling Dislocation Dynamics with Discrete Crack Mechanics to Study Fatigue Crack Growth in High Entropy Alloys" having project No. RP04378G. It was funded by [Science and Engineering Research Board](https://serb.gov.in/) and carried out at [Indian Institute Of Technology Delhi](https://home.iitd.ac.in/).
+
 <figure>
 <p align="center">
 <img src="./images/Ibardamage.gif" alt="I-Bar damage simulation" height="200" style="float">
@@ -12,17 +19,11 @@ Crack propagation in I-Bar under monotonic loading
 
 <figure>
 <p align="center">
-<img src="./images/animation.gif" alt="Force vs displacement line plot" height="200" style="float">
+<img src="./images/animation.gif" alt="Force vs displacement line plot" height="300" style="float">
 <br>
 A typical force-displacement plot will consist of elastic, plastic and fracture part as shown for the case of I-Bar
 </p>
 </figure>
-
-This is the source code of phase field fracture (or crack) simulation program written in C++ and makes use of [deal.II](https://dealii.org/) finite element library version 9.5.1 ([1](https://doi.org/10.1515/jnma-2023-0089) [2](https://github.com/dealii/dealii/tree/dealii-9.5)). This program is written based on the phase field crack models presented in the following papers:
-- [A review on phase-field models of brittle fracture and a new fast hybrid formulation](https://doi.org/10.1007/s00466-014-1109-y)
-- [Phase-Field Modeling of Ductile Fracture](https://doi.org/10.1007/s00466-015-1151-4)
-
-It allows parallel and serial simulation options between linear elastic fracture model, elastoplastic brittle fracture model and elastoplastic ductile fracture model with custom material parameters. The plasticty model used is linear isotropic hardening model. This program was part of the project "Coupling Dislocation Dynamics with Discrete Crack Mechanics to Study Fatigue Crack Growth in High Entropy Alloys" having project No. RP04378G. It was funded by [Science and Engineering Research Board](https://serb.gov.in/) and carried out at [Indian Institute Of Technology Delhi](https://home.iitd.ac.in/).
 
 ## Folder structure and file details
 
