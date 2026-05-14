@@ -2,12 +2,12 @@
 
 
 ## About
-
+<figure>
 <p align="center">
 <img src="./images/Ibardamage.gif" alt="I-Bar damage simulation" height="200" style="float">
-
-Crack propagation in I-Bar under monotonic loading
 </p>
+<figcaption align="center">Crack propagation in I-Bar under monotonic loading</figcaption>
+</figure>
 
 This is the source code of phase field fracture (or crack) simulation program written in C++ and makes use of [deal.II](https://dealii.org/) finite element library version 9.5.1 ([1](https://doi.org/10.1515/jnma-2023-0089) [2](https://github.com/dealii/dealii/tree/dealii-9.5)). This program is written based on the phase field crack models presented in the following papers:
 - [A review on phase-field models of brittle fracture and a new fast hybrid formulation](https://doi.org/10.1007/s00466-014-1109-y)
